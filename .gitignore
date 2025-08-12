@@ -1,0 +1,8 @@
+# Ignore secrets and config data
+homeassistant/config/
+homeassistant/mosquitto/data/
+homeassistant/mosquitto/log/
+*.db
+*.log
+.env
+secrets.yaml

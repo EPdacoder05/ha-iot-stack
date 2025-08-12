@@ -1,0 +1,33 @@
+services:
+  homeassistant:
+    image: homeassistant/home-assistant:stable
+    container_name: homeassistant
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+    volumes:
+      - ./config:/config:rw
+    restart: always
+    network_mode: host
+    # SECURITY: Host mode is for IoT discovery — keep LAN‑only, no internet port forwarding
+
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto
+    volumes:
+      - ./mosquitto/config:/mosquitto/config:rw
+      - ./mosquitto/data:/mosquitto/data:rw
+      - ./mosquitto/log:/mosquitto/log:rw
+    ports:
+      - 1883:1883   # Lock this down via firewall rules
+    restart: always
+
+  bridge:
+    build: ./bridge
+    container_name: bridge
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+    depends_on:
+      - mosquitto
+    restart: always
