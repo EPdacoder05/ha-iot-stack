@@ -1,0 +1,2 @@
+# ha-iot-stack
+NO
