@@ -1,3 +1,6 @@
 [submodule "bridge"]
 	path = bridge
 	url = https://github.com/EPdacoder05/ha-ble-mqtt-bridge
+[submodule "homeassistant/bridge"]
+	path = homeassistant/bridge
+	url = https://github.com/EPdacoder05/ha-ble-mqtt-bridge
