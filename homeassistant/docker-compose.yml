@@ -22,7 +22,7 @@ services:
     restart: always
 
   bridge:
-    build: ../bridge
+    build: ./bridge
     container_name: bridge
     environment:
       - PUID=${PUID}
