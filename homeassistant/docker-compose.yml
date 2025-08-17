@@ -6,24 +6,23 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
     volumes:
-      - /home/ep/ha-iot-stack/homeassistant/config:/config:rw
+      - ./config:/config:rw
     restart: always
     network_mode: host
-    # Host networking required for discovery — keep LAN only
 
   mosquitto:
     image: eclipse-mosquitto:latest
     container_name: mosquitto
     volumes:
-      - /home/ep/ha-iot-stack/homeassistant/mosquitto/config:/mosquitto/config:rw
-      - /home/ep/ha-iot-stack/homeassistant/mosquitto/data:/mosquitto/data:rw
-      - /home/ep/ha-iot-stack/homeassistant/mosquitto/log:/mosquitto/log:rw
+      - ./mosquitto/config:/mosquitto/config:rw
+      - ./mosquitto/data:/mosquitto/data:rw
+      - ./mosquitto/log:/mosquitto/log:rw
     ports:
-      - 1883:1883
+      - "1883:1883"
     restart: always
 
   bridge:
-    build: /home/ep/ha-iot-stack/homeassistant/bridge
+    build: ../bridge
     container_name: bridge
     environment:
       - PUID=${PUID}
