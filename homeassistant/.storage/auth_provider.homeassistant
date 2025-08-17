@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "auth_provider.homeassistant",
+  "data": {
+    "users": [
+      {
+        "username": "ep",
+        "password": "JDJiJDEyJGR1bjMuTC5WZzVPYnNOYnJXaGdLZk9xeWZmWDFFb2tjdDlFeENray8xU3BMM3JIN0M2M0Vl"
+      },
+      {
+        "username": "pi_mqtt",
+        "password": "JDJiJDEyJHJVLy9WN1VZc2VFcmM2eksxQ05ZZk9UbGx3VS5ldmtBUFBGUExNekFGeFZMZGo1NC9Ra0oy"
+      }
+    ]
+  }
+}

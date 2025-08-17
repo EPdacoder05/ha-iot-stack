@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "core.restore_state",
+  "data": [
+    {
+      "state": {"entity_id":"conversation.home_assistant","state":"2025-08-12T22:49:48.879684+00:00","attributes":{"friendly_name":"Home Assistant","supported_features":1},"last_changed":"2025-08-12T22:58:12.101473+00:00","last_reported":"2025-08-12T22:58:12.101473+00:00","last_updated":"2025-08-12T22:58:12.101473+00:00","context":{"id":"01K2G82T05CEPP1Y9QGHWQ12EW","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"event.backup_automatic_backup","state":"unknown","attributes":{"event_types":["completed","failed","in_progress"],"event_type":null,"friendly_name":"Backup Automatic backup"},"last_changed":"2025-08-12T22:58:12.313010+00:00","last_reported":"2025-08-12T22:58:12.313010+00:00","last_updated":"2025-08-12T22:58:12.313010+00:00","context":{"id":"01K2G82T6SEX70VDWADEV0WBA2","parent_id":null,"user_id":null}},
+      "extra_data": {
+        "last_event_type": null,
+        "last_event_attributes": null
+      },
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"person.ep","state":"unknown","attributes":{"editable":true,"id":"ep","device_trackers":[],"user_id":"a3c87bee3fdd4ba798a00909cc478867","friendly_name":"EP"},"last_changed":"2025-08-12T22:58:13.390970+00:00","last_reported":"2025-08-12T22:58:18.561832+00:00","last_updated":"2025-08-12T22:58:18.561832+00:00","context":{"id":"01K2G830A13T9R49AX63YHN6YH","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"light.cozylife_2dc9","state":"off","attributes":{"min_color_temp_kelvin":2702,"max_color_temp_kelvin":6535,"min_mireds":153,"max_mireds":370,"effect_list":["manual","natural","sleep","warm","study","chrismas"],"supported_color_modes":["brightness","color_temp","hs","onoff"],"effect":null,"color_mode":null,"brightness":null,"color_temp_kelvin":null,"color_temp":null,"hs_color":null,"rgb_color":null,"xy_color":null,"last_effect":"manual","transitioning":0,"assumed_state":true,"friendly_name":"Cozy Bulb Club","supported_features":36},"last_changed":"2025-08-17T04:30:00.380916+00:00","last_reported":"2025-08-17T04:42:23.224407+00:00","last_updated":"2025-08-17T04:30:00.380916+00:00","context":{"id":"01K2V4N7NQ21XY7Y6JQ4QSH0SM","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"switch.adaptive_lighting_sleep_mode_sleeper_leeper","state":"off","attributes":{"icon":"mdi:sleep","friendly_name":"Adaptive Lighting Sleep Mode: Sleeper Leeper"},"last_changed":"2025-08-12T22:58:16.703464+00:00","last_reported":"2025-08-12T22:58:16.703464+00:00","last_updated":"2025-08-12T22:58:16.703464+00:00","context":{"id":"01K2G82YFZ1ZC2TX1BDC6D48TC","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"switch.adaptive_lighting_adapt_color_sleeper_leeper","state":"on","attributes":{"icon":"mdi:sun-thermometer","friendly_name":"Adaptive Lighting Adapt Color: Sleeper Leeper"},"last_changed":"2025-08-12T22:58:16.704453+00:00","last_reported":"2025-08-12T22:58:16.704453+00:00","last_updated":"2025-08-12T22:58:16.704453+00:00","context":{"id":"01K2G82YG0S6MA5XZP9VCYGVSP","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"switch.adaptive_lighting_adapt_brightness_sleeper_leeper","state":"on","attributes":{"icon":"mdi:brightness-4","friendly_name":"Adaptive Lighting Adapt Brightness: Sleeper Leeper"},"last_changed":"2025-08-12T22:58:16.705261+00:00","last_reported":"2025-08-12T22:58:16.705261+00:00","last_updated":"2025-08-12T22:58:16.705261+00:00","context":{"id":"01K2G82YG11DC5NPP37E4T6M2N","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"switch.adaptive_lighting_sleeper_leeper","state":"on","attributes":{"configuration":{},"manual_control":[],"brightness_pct":100,"color_temp_kelvin":5445,"color_temp_mired":183,"rgb_color":[255,236.49336502527882,220.5420332324113],"xy_color":[0.355,0.344],"hs_color":[27.429,13.725],"sun_position":0.9836315371270796,"force_rgb_color":false,"autoreset_time_remaining":{},"icon":"mdi:theme-light-dark","friendly_name":"Adaptive Lighting: Sleeper Leeper"},"last_changed":"2025-08-12T22:58:16.712217+00:00","last_reported":"2025-08-17T18:28:12.322676+00:00","last_updated":"2025-08-17T18:27:42.616625+00:00","context":{"id":"01K2WMK3WR4F028649RVEBYMG6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.bedroom_lights_on_at_8_30_pm","state":"on","attributes":{"id":"bedroom_lights_on_830pm","last_triggered":"2025-08-17T00:30:00.127335+00:00","mode":"single","current":0,"friendly_name":"Bedroom Lights On at 8:30 PM"},"last_changed":"2025-08-12T22:58:17.253100+00:00","last_reported":"2025-08-17T00:30:00.301449+00:00","last_updated":"2025-08-17T00:30:00.301449+00:00","context":{"id":"01K2TPXRXYJDT7XZAMDN1CYJQ6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.bedroom_lights_off_at_12_30_am","state":"on","attributes":{"id":"bedroom_lights_off_1230am","last_triggered":"2025-08-17T04:30:00.376153+00:00","mode":"single","current":0,"friendly_name":"Bedroom Lights Off at 12:30 AM"},"last_changed":"2025-08-12T22:58:17.254328+00:00","last_reported":"2025-08-17T04:30:00.517168+00:00","last_updated":"2025-08-17T04:30:00.517168+00:00","context":{"id":"01K2V4N7NQ21XY7Y6JQ4QSH0SM","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.turn_on_bedroom_fade","state":"on","attributes":{"id":"bedroom_fade_script_on","last_triggered":"2025-08-12T03:25:44.618664+00:00","mode":"single","current":0,"friendly_name":"Turn On Bedroom Fade"},"last_changed":"2025-08-12T22:58:17.255223+00:00","last_reported":"2025-08-12T22:58:17.255223+00:00","last_updated":"2025-08-12T22:58:17.255223+00:00","context":{"id":"01K2G82Z17W5G271FTJ6JPVPTB","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.turn_off_bedroom_fade","state":"on","attributes":{"id":"bedroom_fade_script_off","last_triggered":null,"mode":"single","current":0,"friendly_name":"Turn Off Bedroom Fade"},"last_changed":"2025-08-12T22:58:17.256063+00:00","last_reported":"2025-08-12T22:58:17.256063+00:00","last_updated":"2025-08-12T22:58:17.256063+00:00","context":{"id":"01K2G82Z18DZPM5SBA5ANV8MH4","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"tts.google_translate_en_com","state":"unknown","attributes":{"friendly_name":"Google Translate en com"},"last_changed":"2025-08-12T22:58:17.426132+00:00","last_reported":"2025-08-12T22:58:17.426132+00:00","last_updated":"2025-08-12T22:58:17.426132+00:00","context":{"id":"01K2G82Z6JFCAP6BTVJS2XNYR7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"update.adaptive_lighting_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v1.26.0","in_progress":false,"latest_version":"v1.26.0","release_summary":null,"release_url":"https://github.com/basnijholt/adaptive-lighting/releases/v1.26.0","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/adaptive_lighting/icon.png","friendly_name":"Adaptive Lighting update","supported_features":23},"last_changed":"2025-08-12T22:58:18.422594+00:00","last_reported":"2025-08-12T22:58:18.422594+00:00","last_updated":"2025-08-12T22:58:18.422594+00:00","context":{"id":"01K2G8305PD7ABY4CH5WJXF4FB","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"update.local_tuya_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"v5.2.4","in_progress":false,"latest_version":"v5.2.4","release_summary":null,"release_url":"https://github.com/rospogrigio/localtuya/releases/v5.2.4","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/localtuya/icon.png","friendly_name":"Local Tuya update","supported_features":23},"last_changed":"2025-08-12T22:58:18.423965+00:00","last_reported":"2025-08-12T22:58:18.423965+00:00","last_updated":"2025-08-12T22:58:18.423965+00:00","context":{"id":"01K2G8305Q2PRB045MPGAH1DFA","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"update.hacs_update","state":"off","attributes":{"auto_update":false,"display_precision":0,"installed_version":"2.0.5","in_progress":false,"latest_version":"2.0.5","release_summary":null,"release_url":"https://github.com/hacs/integration/releases/2.0.5","skipped_version":null,"title":null,"update_percentage":null,"entity_picture":"https://brands.home-assistant.io/_/hacs/icon.png","friendly_name":"HACS update","supported_features":23},"last_changed":"2025-08-12T22:58:18.424985+00:00","last_reported":"2025-08-12T22:58:18.424985+00:00","last_updated":"2025-08-12T22:58:18.424985+00:00","context":{"id":"01K2G8305RZ7V6205JG7YVC3X0","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"light.bedframe_led_light","state":"unavailable","attributes":{"supported_color_modes":["rgb"],"friendly_name":"Bedframe LED Light","supported_features":40},"last_changed":"2025-08-16T08:08:16.574006+00:00","last_reported":"2025-08-16T08:08:16.574006+00:00","last_updated":"2025-08-16T08:08:16.574006+00:00","context":{"id":"01K2RYR5XYETQAEB8A5QCWVSDR","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-17T18:28:21.159115+00:00"
+    },
+    {
+      "state": {"entity_id":"script.bedroom_rainbow_fade","state":"on","attributes":{"last_triggered":"2025-08-12T03:25:44.627961+00:00","mode":"single","current":1,"last_action":"delay 0:00:10","friendly_name":"Bedroom Rainbow Fade"},"last_changed":"2025-08-12T03:25:44.628315+00:00","last_reported":"2025-08-12T07:47:23.272963+00:00","last_updated":"2025-08-12T07:45:00.750411+00:00","context":{"id":"01K2EKTPTEGR6MG1RHPA768GBE","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-12T07:47:27.439672+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.cozy_bulb_on_at_8_30_pm","state":"on","attributes":{"id":"cozy_bulb_on_830pm","last_triggered":"2025-08-11T00:30:00.201213+00:00","mode":"single","current":0,"friendly_name":"Bedroom Lights On at 8:30 PM"},"last_changed":"2025-08-08T22:34:51.633278+00:00","last_reported":"2025-08-11T00:30:00.279104+00:00","last_updated":"2025-08-11T00:30:00.279104+00:00","context":{"id":"01K2B8HF08XSP5YFHTK7QT3F9Q","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-11T03:07:56.025257+00:00"
+    },
+    {
+      "state": {"entity_id":"automation.cozy_bulb_off_at_12_00_am","state":"on","attributes":{"id":"cozy_bulb_off_12am","last_triggered":"2025-08-10T04:30:00.178243+00:00","mode":"single","current":0,"friendly_name":"Bedroom Lights Off at 12:30 AM"},"last_changed":"2025-08-08T22:34:51.634783+00:00","last_reported":"2025-08-10T04:30:00.273528+00:00","last_updated":"2025-08-10T04:30:00.273528+00:00","context":{"id":"01K293W6FHY6WKX6D276V04YE7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-11T03:07:56.026075+00:00"
+    },
+    {
+      "state": {"entity_id":"script.bedroom_aurora_fade","state":"off","attributes":{"last_triggered":"2025-08-08T23:37:26.446964+00:00","mode":"single","current":0,"friendly_name":"Bedroom Aurora Fade"},"last_changed":"2025-08-11T03:07:55.998803+00:00","last_reported":"2025-08-11T03:07:55.998803+00:00","last_updated":"2025-08-11T03:07:55.998803+00:00","context":{"id":"01K2BHJMPY46WZ7160YNF7SMT7","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-11T03:21:35.825888+00:00"
+    },
+    {
+      "state": {"entity_id":"script.bedroom_synced_fade","state":"off","attributes":{"last_triggered":"2025-08-09T00:21:38.693148+00:00","mode":"single","current":0,"friendly_name":"Bedroom Synced Fade"},"last_changed":"2025-08-09T04:23:54.837278+00:00","last_reported":"2025-08-09T04:23:54.837278+00:00","last_updated":"2025-08-09T04:23:54.837278+00:00","context":{"id":"01K26H4APNHWF8306DF18SJHQ6","parent_id":null,"user_id":null}},
+      "extra_data": null,
+      "last_seen": "2025-08-11T00:03:38.319436+00:00"
+    }
+  ]
+}

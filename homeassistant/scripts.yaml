@@ -1,0 +1,58 @@
+bedroom_rainbow_fade:
+  alias: "Bedroom Rainbow Fade"
+  mode: single
+  sequence:
+    # This repeat block creates an infinite loop
+    - repeat:
+        while:
+          # This condition is always true, so the loop runs forever
+          - condition: template
+            value_template: "{{ true }}"
+        sequence:
+          # --- FADE TO RED ---
+          - service: light.turn_on
+            target: { entity_id: light.bedroom_lights }
+            data: { rgb_color: [255, 0, 0], brightness_pct: 100, transition: 10 }
+          - delay: '00:00:10'
+
+          # --- FADE TO PINK ---
+          - service: light.turn_on
+            target: { entity_id: light.bedroom_lights }
+            data: { rgb_color: [255, 105, 180], brightness_pct: 100, transition: 10 }
+          - delay: '00:00:10'
+
+          # --- FADE TO MAGENTA ---
+          - service: light.turn_on
+            target: { entity_id: light.bedroom_lights }
+            data: { rgb_color: [255, 0, 255], brightness_pct: 100, transition: 10 }
+          - delay: '00:00:10'
+
+          # --- FADE TO LAVENDER ---
+          - service: light.turn_on
+            target: { entity_id: light.bedroom_lights }
+            data: { rgb_color: [200, 160, 255], brightness_pct: 100, transition: 10 }
+          - delay: '00:00:10'
+
+          # --- FADE TO DEEP BLUE ---
+          - service: light.turn_on
+            target: { entity_id: light.bedroom_lights }
+            data: { rgb_color: [0, 0, 255], brightness_pct: 100, transition: 10 }
+          - delay: '00:00:10'
+
+          # --- FADE TO CYAN ---
+          - service: light.turn_on
+            target: { entity_id: light.bedroom_lights }
+            data: { rgb_color: [0, 255, 255], brightness_pct: 100, transition: 10 }
+          - delay: '00:00:10'
+
+          # --- FADE TO LIGHT GREEN ---
+          - service: light.turn_on
+            target: { entity_id: light.bedroom_lights }
+            data: { rgb_color: [144, 238, 144], brightness_pct: 100, transition: 10 }
+          - delay: '00:00:10'
+          
+          # --- FADE TO COOL GREEN ---
+          - service: light.turn_on
+            target: { entity_id: light.bedroom_lights }
+            data: { rgb_color: [0, 255, 127], brightness_pct: 100, transition: 10 }
+          - delay: '00:00:10'
