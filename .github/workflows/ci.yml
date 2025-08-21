@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository & Submodules
         uses: actions/checkout@v4
         with:
           submodules: 'recursive'
@@ -21,20 +21,19 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install Dependencies
+      - name: Install Tools & Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install flake8 black
-          # Install dependencies from the bridge submodule directory
-          pip install -r bridge/requirements.txt
+          # Install bridge dependencies from the root, pointing to the file
+          pip install -r ./bridge/requirements.txt
 
       - name: Lint and Format Check
+        # Run checks against the bridge directory from the root
         run: |
-          # Run checks against the bridge submodule directory
-          flake8 bridge/ --count --select=E9,F63,F7,F82 --show-source --statistics
-          black bridge/ --check
+          flake8 ./bridge
+          black --check ./bridge
 
       - name: Build Docker Containers
-        run: |
-          # Build using the docker-compose.yml at the repository root
-          docker compose build
+        # Run the build from the root where the compose file is
+        run: docker compose build
