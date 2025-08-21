@@ -1,8 +1,24 @@
-# Ignore secrets and config data
-homeassistant/config/
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Home Assistant runtime data, logs, and database
+homeassistant/deps/
+homeassistant/tts/
+homeassistant/.storage/
+homeassistant/.HA_VERSION
+homeassistant/*.db
+homeassistant/*.db-*
+homeassistant/*.log
+homeassistant/*.log.*
+
+# Mosquitto persistent data and logs
 homeassistant/mosquitto/data/
 homeassistant/mosquitto/log/
-*.db
-*.log
-.env
+
+# Secrets and environment variables
+homeassistant/secrets.yaml
+homeassistant/.env
 secrets.yaml
+*.secrets
