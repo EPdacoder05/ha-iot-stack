@@ -17,7 +17,3 @@ graph TD
         H(Mosquitto MQTT Broker)
         I(ha-ble-mqtt-bridge Container)
     end
-    
-    subgraph "IoT/Edge Devices (IoT VLAN)"
-        J(CozyLife BLE Lights)
-        K(Security Cameras / Dashcams)
