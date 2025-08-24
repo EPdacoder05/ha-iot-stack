@@ -10,19 +10,7 @@ The lab is designed as a personal cloud with defined security boundaries and spe
 
 ```mermaid
 graph TD
-    subgraph "External World"
-        A[Internet]
-    end
 
-    subgraph "Secure Access Layer (Tailscale Mesh VPN)"
-        B(MacBook Pro - Daily Driver)
-        C(iPhone/Mobile Devices)
-    end
-
-    subgraph "Home Network (Segmented VLANs)"
-        D(Router/Firewall)
-        E(RPi3 - PiSpy Autoheal) -- Manages --> D
-    end
 
     subgraph "Core Lab Infrastructure (Workhorse PC / Future Server)"
         F[Docker Engine]
@@ -34,20 +22,3 @@ graph TD
     subgraph "IoT/Edge Devices (IoT VLAN)"
         J(CozyLife BLE Lights)
         K(Security Cameras / Dashcams)
-    end
-
-    subgraph "Security & Development Labs (Isolated VLANs)"
-        L(Hackbook - Offensive Security)
-        M(popsmirror - Testing Env)
-        N(NullPointVector - IDPS Dev)
-    end
-
-    A <--> D
-    B -- Secure VPN --> D
-    C -- Secure VPN --> D
-    D -- LAN --> E
-    D -- LAN --> F
-    F --> G & H & I
-    I -- Bluetooth --> J
-    K -- Wi-Fi --> F
-    D -- Isolated LAN --> L & M & N
