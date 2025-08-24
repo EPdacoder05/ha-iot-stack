@@ -11,7 +11,6 @@ The lab is designed as a personal cloud with defined security boundaries and spe
 ```mermaid
 graph TD
 
-
     subgraph "Core Lab Infrastructure (Workhorse PC / Future Server)"
         F[Docker Engine]
         G(Home Assistant Container)
