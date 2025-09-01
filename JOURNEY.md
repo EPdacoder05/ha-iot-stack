@@ -26,7 +26,7 @@ This initial project became the foundation for a much larger vision. The challen
 
 This inspired a revamp of two larger-scale projects:
 * **`NullPointVector`**: An ambitious, multi-channel Intrusion Detection and Prevention System (IDPS) designed to protect against phishing, smishing, and vishing attacks in real-time.
-* **`DevSecEnv`**: A secure, automated performance testing environment to replicate production infrastructure, initially a hackathon project for work (PopsMirror), now is my catalyst to test changes without breaking critical home automations.
+* **`DevSecEnv`**: A secure, automated performance testing environment to replicate production infrastructure, initially a hackathon project for work (PopsMirror), now is one of my main platforms and my catalyst to test changes without breaking critical home automations.
 
 ## The Philosophy: The AI-Accelerated Engineer
 
