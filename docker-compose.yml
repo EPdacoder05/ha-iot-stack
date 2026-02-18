@@ -1,6 +1,6 @@
 services:
   homeassistant:
-    image: ghcr.io/home-assistant/home-assistant:stable
+    image: ghcr.io/home-assistant/home-assistant:2024.2.0
     container_name: homeassistant
     volumes:
       - ./homeassistant:/config
@@ -9,10 +9,26 @@ services:
     ports:
       - "8123:8123"
     restart: unless-stopped
-    privileged: true
+    network_mode: host
+    cap_add:
+      - NET_ADMIN      # Network management for mDNS/discovery
+      - NET_RAW        # Raw socket access for BLE/network scanning
+    cap_drop:
+      - ALL            # Drop all capabilities first, then add back only what's needed
+    security_opt:
+      - no-new-privileges:true
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0    # Zigbee/Z-Wave stick (if used)
+      - /dev/ttyACM0:/dev/ttyACM0    # Serial devices
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8123/api/"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
 
   mosquitto:
-    image: eclipse-mosquitto:latest
+    image: eclipse-mosquitto:2.0
     container_name: mosquitto
     volumes:
       - ./homeassistant/mosquitto/config:/mosquitto/config
@@ -21,6 +37,18 @@ services:
     ports:
       - "1883:1883"
     restart: unless-stopped
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp
+    healthcheck:
+      test: ["CMD", "mosquitto_sub", "-t", "$$SYS/#", "-C", "1", "-i", "healthcheck", "-W", "5"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
   bridge:
     build: ./bridge
@@ -30,8 +58,23 @@ services:
     depends_on:
       - mosquitto
     restart: unless-stopped
-    privileged: true
+    network_mode: host
+    cap_add:
+      - NET_ADMIN      # Network management for BLE
+      - NET_RAW        # Raw socket access for Bluetooth
+    cap_drop:
+      - ALL            # Drop all capabilities first, then add back only what's needed
+    security_opt:
+      - no-new-privileges:true
+    devices:
+      - /dev/hci0:/dev/hci0    # Bluetooth HCI device
     volumes:
       - ./homeassistant/secrets.yaml:/app/secrets.yaml:ro
       - /var/run/dbus:/var/run/dbus:ro
       - /run/udev:/run/udev:ro
+    healthcheck:
+      test: ["CMD", "pgrep", "-f", "python"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
