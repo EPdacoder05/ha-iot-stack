@@ -28,7 +28,7 @@ services:
       start_period: 60s
 
   mosquitto:
-    image: eclipse-mosquitto:2.0
+    image: eclipse-mosquitto:2.0.18
     container_name: mosquitto
     volumes:
       - ./homeassistant/mosquitto/config:/mosquitto/config
@@ -73,7 +73,7 @@ services:
       - /var/run/dbus:/var/run/dbus:ro
       - /run/udev:/run/udev:ro
     healthcheck:
-      test: ["CMD", "pgrep", "-f", "python"]
+      test: ["CMD-SHELL", "pgrep -f 'python.*bridge' || pgrep -f 'python.*mqtt' || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
