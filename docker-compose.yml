@@ -51,7 +51,9 @@ services:
       retries: 3
 
   bridge:
-    build: ./bridge
+    build:
+      context: ./bridge
+      dockerfile: Dockerfile
     container_name: bridge
     environment:
       - MQTT_BROKER=mosquitto
