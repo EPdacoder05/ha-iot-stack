@@ -1,0 +1,11 @@
+# Add required packages
+pyflakes
+pycodestyle
+platformdirs
+pathspec
+packaging
+mypy-extensions
+mccabe
+click
+flake8
+black
