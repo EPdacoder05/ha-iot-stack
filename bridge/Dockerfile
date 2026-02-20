@@ -21,9 +21,9 @@ LABEL org.opencontainers.image.authors="EPdacoder05"
 LABEL org.opencontainers.image.source="https://github.com/EPdacoder05/ha-ble-mqtt-bridge"
 LABEL org.opencontainers.image.documentation="https://github.com/EPdacoder05/ha-ble-mqtt-bridge/blob/main/README.md"
 
-# Security: Create non-root user with no shell and no home directory
-RUN groupadd -r appuser && \
-    useradd -r -g appuser -s /sbin/nologin appuser
+# Security: Create non-root user with explicit UID/GID 1001
+RUN groupadd -r -g 1001 appuser && \
+    useradd -r -u 1001 -g appuser -s /sbin/nologin appuser
 
 WORKDIR /app
 

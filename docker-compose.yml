@@ -10,6 +10,7 @@ services:
       - "8123:8123"
     restart: unless-stopped
     network_mode: host
+    user: "1001:1001"
     cap_add:
       - NET_ADMIN      # Network management for mDNS/discovery
       - NET_RAW        # Raw socket access for BLE/network scanning
@@ -17,6 +18,9 @@ services:
       - ALL            # Drop all capabilities first, then add back only what's needed
     security_opt:
       - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp:size=100M,mode=1777
     devices:
       - /dev/ttyUSB0:/dev/ttyUSB0    # Zigbee/Z-Wave stick (if used)
       - /dev/ttyACM0:/dev/ttyACM0    # Serial devices
@@ -43,7 +47,7 @@ services:
       - no-new-privileges:true
     read_only: true
     tmpfs:
-      - /tmp
+      - /tmp:size=100M,mode=1777
     healthcheck:
       test: ["CMD", "mosquitto_sub", "-t", "$$SYS/#", "-C", "1", "-i", "healthcheck", "-W", "5"]
       interval: 30s
@@ -61,6 +65,7 @@ services:
       - mosquitto
     restart: unless-stopped
     network_mode: host
+    user: "1001:1001"
     cap_add:
       - NET_ADMIN      # Network management for BLE
       - NET_RAW        # Raw socket access for Bluetooth
@@ -68,6 +73,9 @@ services:
       - ALL            # Drop all capabilities first, then add back only what's needed
     security_opt:
       - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp:size=100M,mode=1777
     devices:
       - /dev/hci0:/dev/hci0    # Bluetooth HCI device
     volumes:
